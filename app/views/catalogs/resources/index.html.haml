@@ -1,0 +1,22 @@
+%h1.cat_title Aulas
+%table{ :width => '950', :border => '1', :cellspacing => '0'}
+  %tr.tbl_header
+    %th Abrev.
+    %th Nombre    
+    %th Descripción
+    %th id color
+    %th
+    %th
+    %th
+  - @catalogs_resources.each do |catalogs_resource|
+    %tr.tbl_content
+      %td= catalogs_resource.abbr
+      %td= catalogs_resource.name
+      %td= catalogs_resource.description
+      %td{:bgcolor => catalogs_resource.id_color}
+      %td{ :align => 'center'}= link_to 'Ver', catalogs_resource
+      %td{ :align => 'center'}= link_to 'Editar', edit_catalogs_resource_path(catalogs_resource)
+      %td{ :align => 'center'}= link_to 'Borrrrar', catalogs_resource, :confirm => 'Are you sure?', :method => :delete
+%br/
+= link_to 'Nueva aula', new_catalogs_resource_path
+%br &nbsp;

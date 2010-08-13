@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @catalogs_room.name %>
+</p>
+
+<p>
+  <b>Abbr:</b>
+  <%= @catalogs_room.abbr %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @catalogs_room.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_catalogs_room_path(@catalogs_room) %> |
+<%= link_to 'Back', catalogs_rooms_path %>

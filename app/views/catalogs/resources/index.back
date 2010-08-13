@@ -1,0 +1,27 @@
+<h1>Listing catalogs_rooms</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Abbr</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @catalogs_resources.each do |catalogs_room| %>
+  <tr>
+    <td><%= catalogs_room.name %></td>
+    <td><%= catalogs_room.abbr %></td>
+    <td><%= catalogs_room.description %></td>
+    <td><%= link_to 'Show', catalogs_room %></td>
+    <td><%= link_to 'Edit', edit_catalogs_resource_path(catalogs_room) %></td>
+    <td><%= link_to 'Destroy', catalogs_room, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Room', new_catalogs_resource_path %>

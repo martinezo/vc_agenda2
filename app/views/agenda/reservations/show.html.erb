@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Event:</b>
+  <%= @agenda_reservation.event_id %>
+</p>
+
+<p>
+  <b>Resource:</b>
+  <%= @agenda_reservation.resource_id %>
+</p>
+
+<p>
+  <b>Start date time:</b>
+  <%= @agenda_reservation.start_date_time %>
+</p>
+
+<p>
+  <b>End date time:</b>
+  <%= @agenda_reservation.end_date_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_agenda_reservation_path(@agenda_reservation) %> |
+<%= link_to 'Back', agenda_reservations_path %>

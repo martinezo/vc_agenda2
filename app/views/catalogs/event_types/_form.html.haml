@@ -1,0 +1,24 @@
+= form_for(@catalogs_event_type) do |f|
+  - if @catalogs_event_type.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@catalogs_event_type.errors.count, "error")
+        prohibited this catalogs_event_type from being saved:
+      %ul
+        - @catalogs_event_type.errors.full_messages.each do |msg|
+          %li= msg
+
+  %table{ :width => '950', :border => '1', :cellspacing => '0'}
+    %tr.tbl_content
+      %td.tbl_row_header{:width => '110'} Abrev.:
+      %td= f.text_field :abbr, :size => '15'
+
+    %tr.tbl_content
+      %td.tbl_row_header{:width => '110'} Nombre:
+      %td= f.text_field :name
+    
+  %br &nbsp;
+
+  .actions
+    = f.submit 'Guardar tipo de evento'
+

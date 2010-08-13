@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Abbr:</b>
+  <%= @catalogs_event_type.abbr %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @catalogs_event_type.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_catalogs_event_type_path(@catalogs_event_type) %> |
+<%= link_to 'Back', catalogs_event_types_path %>

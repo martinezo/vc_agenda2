@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%table{ :width => '950', :border => '1', :cellspacing => '0'}
+  %tr.tbl_content
+    %td.tbl_header Abrev.:
+    %td= @catalogs_resource.abbr
+  %tr.tbl_content
+    %td.tbl_header{:width => '110'} Nombre:
+    %td= @catalogs_resource.name  
+  %tr.tbl_content
+    %td.tbl_header Descripción:
+    %td= @catalogs_resource.description
+  %tr.tbl_content
+    %td.tbl_header id color:
+    %td{:bgcolor => @catalogs_resource.id_color}
+
+%br &nbsp;
+= link_to 'Editar', edit_catalogs_resource_path(@catalogs_resource)
+|
+\#{link_to 'Regresar', catalogs_resources_path}
+%br &nbsp;

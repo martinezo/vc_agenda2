@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @catalogs_resource.name %>
+</p>
+
+<p>
+  <b>Abbr:</b>
+  <%= @catalogs_resource.abbr %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @catalogs_resource.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_catalogs_resource_path(@catalogs_resource) %> |
+<%= link_to 'Back', catalogs_resources_path %>

@@ -1,0 +1,29 @@
+<h1>Listing catalogs_ubications</h1>
+
+<table>
+  <tr>
+    <th>Abbr</th>
+    <th>Name</th>
+    <th>Responsible</th>
+    <th>Tel ext</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @catalogs_ubications.each do |catalogs_ubication| %>
+  <tr>
+    <td><%= catalogs_ubication.abbr %></td>
+    <td><%= catalogs_ubication.name %></td>
+    <td><%= catalogs_ubication.responsible %></td>
+    <td><%= catalogs_ubication.tel_ext %></td>
+    <td><%= link_to 'Show', catalogs_ubication %></td>
+    <td><%= link_to 'Edit', edit_catalogs_ubication_path(catalogs_ubication) %></td>
+    <td><%= link_to 'Destroy', catalogs_ubication, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ubication', new_catalogs_ubication_path %>

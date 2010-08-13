@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%table{ :width => '950', :border => '1', :cellspacing => '0'}
+  %tr.tbl_content
+    %td.tbl_header Abrev.:
+    %td= @catalogs_event_type.abbr
+  %tr.tbl_content
+    %td.tbl_header{:width => '110'} Nombre:
+    %td= @catalogs_event_type.name
+
+%br &nbsp;
+= link_to 'Editar', edit_catalogs_event_type_path(@catalogs_event_type)
+|
+\#{link_to 'Cancelar', catalogs_event_types_path}
+%br &nbsp;

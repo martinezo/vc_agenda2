@@ -1,0 +1,22 @@
+%h1.cat_title Ubicaciones
+%table{ :width => '950', :border => '1', :cellspacing => '0'}
+  %tr.tbl_header
+    %th Abrev.
+    %th Nombre
+    %th Responsable
+    %th Tel/ext
+    %th
+    %th
+    %th
+  - @catalogs_ubications.each do |catalogs_ubication|
+    %tr.tbl_content
+      %td= catalogs_ubication.abbr
+      %td= catalogs_ubication.name
+      %td= catalogs_ubication.responsible
+      %td= catalogs_ubication.tel_ext
+      %td{ :align => 'center'}= link_to 'Ver', catalogs_ubication
+      %td{ :align => 'center'}= link_to 'Editar', edit_catalogs_ubication_path(catalogs_ubication)
+      %td{ :align => 'center'}= link_to 'Borrar', catalogs_ubication, :confirm => 'Are you sure?', :method => :delete
+%br/
+= link_to 'Nueva ubicación', new_catalogs_ubication_path
+%br &nbsp;

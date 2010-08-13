@@ -1,0 +1,29 @@
+<h1>Listing agenda_reservations</h1>
+
+<table>
+  <tr>
+    <th>Event</th>
+    <th>Resource</th>
+    <th>Start date time</th>
+    <th>End date time</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @agenda_reservations.each do |agenda_reservation| %>
+  <tr>
+    <td><%= agenda_reservation.event_id %></td>
+    <td><%= agenda_reservation.resource_id %></td>
+    <td><%= agenda_reservation.start_date_time %></td>
+    <td><%= agenda_reservation.end_date_time %></td>
+    <td><%= link_to 'Show', agenda_reservation %></td>
+    <td><%= link_to 'Edit', edit_agenda_reservation_path(agenda_reservation) %></td>
+    <td><%= link_to 'Destroy', agenda_reservation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Reservation', new_agenda_reservation_path %>

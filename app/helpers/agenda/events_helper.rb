@@ -1,0 +1,2 @@
+module Agenda::EventsHelper
+end

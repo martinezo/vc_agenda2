@@ -1,0 +1,6 @@
+<h1>Editing catalogs_room</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @catalogs_room %> |
+<%= link_to 'Back', catalogs_rooms_path %>

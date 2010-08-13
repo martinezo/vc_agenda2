@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Requester name:</b>
+  <%= @agenda_event.requester_name %>
+</p>
+
+<p>
+  <b>Requester email:</b>
+  <%= @agenda_event.requester_email %>
+</p>
+
+<p>
+  <b>Ubication:</b>
+  <%= @agenda_event.ubication_id %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @agenda_event.description %>
+</p>
+
+<p>
+  <b>Event type:</b>
+  <%= @agenda_event.event_type_id %>
+</p>
+
+<p>
+  <b>Commentaries:</b>
+  <%= @agenda_event.commentaries %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @agenda_event.status %>
+</p>
+
+<p>
+  <b>Status updated at:</b>
+  <%= @agenda_event.status_updated_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_agenda_event_path(@agenda_event) %> |
+<%= link_to 'Back', agenda_events_path %>

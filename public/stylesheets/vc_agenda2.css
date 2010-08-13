@@ -1,0 +1,87 @@
+/* 
+    Document   : salva_web_inb
+    Created on : Jun 3, 2010, 5:07:12 PM
+    Author     : martinezo
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+
+.cat_title{
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: bold;
+    color: #426995;
+    font-size: 24px;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.tbl_header{
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bolder;
+    text-transform: uppercase;    
+    background-color: #FF9900;
+}
+
+.tbl_row_header{
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bolder;
+    text-transform: uppercase;
+    background-color: #FF9900;
+    text-align: right;
+}
+
+.tbl_content{
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    text-align: left;
+        
+}
+
+a:link{
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+}
+
+.calendar_tab
+{
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        text-align: center;
+        font-weight: bolder;
+        color: #422010;
+}
+
+.calendar_day
+{
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        text-align: center;
+        color: #422010;
+}
+
+.small, .small_bolder
+{
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 10px;        
+}
+
+.small_bolder
+{
+        font-weight: bolder;
+}

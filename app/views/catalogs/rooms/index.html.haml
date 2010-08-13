@@ -1,0 +1,20 @@
+%h1.cat_title Aulas
+%table{ :width => '950', :border => '1', :cellspacing => '0'}
+  %tr.tbl_header
+    %th Abrev.
+    %th Nombre    
+    %th Descripción
+    %th
+    %th
+    %th
+  - @catalogs_rooms.each do |catalogs_room|
+    %tr.tbl_content
+      %td= catalogs_room.abbr
+      %td= catalogs_room.name      
+      %td= catalogs_room.description
+      %td{ :align => 'center'}= link_to 'Ver', catalogs_room
+      %td{ :align => 'center'}= link_to 'Editar', edit_catalogs_room_path(catalogs_room)
+      %td{ :align => 'center'}= link_to 'Borrar', catalogs_room, :confirm => 'Are you sure?', :method => :delete
+%br/
+= link_to 'Nueva aula', new_catalogs_room_path
+%br &nbsp;

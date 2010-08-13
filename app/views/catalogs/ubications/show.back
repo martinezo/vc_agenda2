@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Abbr:</b>
+  <%= @catalogs_ubication.abbr %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @catalogs_ubication.name %>
+</p>
+
+<p>
+  <b>Responsible:</b>
+  <%= @catalogs_ubication.responsible %>
+</p>
+
+<p>
+  <b>Tel ext:</b>
+  <%= @catalogs_ubication.tel_ext %>
+</p>
+
+
+<%= link_to 'Edit', edit_catalogs_ubication_path(@catalogs_ubication) %> |
+<%= link_to 'Back', catalogs_ubications_path %>

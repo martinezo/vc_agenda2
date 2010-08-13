@@ -1,0 +1,42 @@
+-require 'lib/common'
+%br
+
+/ Calendar Mont-year tab
+%table{ :width => '600', :height => '54', :borde => '0', :cellspacing => '0'}
+    %tr{ :background => '/images/Calendario_tab.jpg'}
+        %td{:width => '340'} &nbsp;
+        %td.calendar_tab{:width => '240', :align => 'center', :valign => 'middle'}= @calendar_tab
+        %td{:width => '20' } &nbsp;
+        
+        
+/Calendar days header
+%table{ :width => '600', :height => '43', :borde => '0', :cellspacing => '0'}
+    %tr{ :background => '/images/Calendario_days.jpg'}
+        %td &nbsp;
+
+/Calendar body
+%table{ :width => '600', :borde => '0', :cellspacing => '0'}
+
+    /week 1
+    %tr{ :height => '9', :align => 'center'}
+        %td{:background => '/images/Calendario_left.jpg', :width => '20'} &nbsp;
+        -(1..7).each{|d|
+        %td{:width => '80'}= Common.calendar_day(d,@year,@month_num)
+        - }
+        %td{:background => '/images/Calendario_rigth.jpg', :width => '20'} &nbsp;
+
+    -@res_month.each{|rm|
+    %tr{ :height => '6', :align => 'center'}
+        %td{:background => '/images/Calendario_left_res.jpg', :width => '20'} 
+        -(1..7).each{|dm|
+        %td{:width => '80', :bgcolor => (@cal_res[dm][rm[:resource_id]] if @cal_res[dm]) } 
+        - }       
+        %td{:background => '/images/Calendario_rigth_res.jpg', :width => '20'} 
+    - }
+
+/Calendar buttom
+%table{ :width => '600', :height => '21', :borde => '0', :cellspacing => '0'}
+    %tr{ :background => '/images/Calendario_buttom.jpg'}
+        %td &nbsp;
+
+%br

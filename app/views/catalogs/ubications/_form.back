@@ -1,0 +1,33 @@
+<%= form_for(@catalogs_ubication) do |f| %>
+  <% if @catalogs_ubication.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@catalogs_ubication.errors.count, "error") %> prohibited this catalogs_ubication from being saved:</h2>
+
+      <ul>
+      <% @catalogs_ubication.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :abbr %><br />
+    <%= f.text_field :abbr %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :responsible %><br />
+    <%= f.text_field :responsible %>
+  </div>
+  <div class="field">
+    <%= f.label :tel_ext %><br />
+    <%= f.text_field :tel_ext %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

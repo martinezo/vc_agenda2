@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  requester_name: MyString
+  requester_email: MyString
+  ubication_id: 1
+  description: MyString
+  event_type_id: 1
+  commentaries: MyText
+  status: MyString
+  status_updated_at: 2010-08-04 10:51:52
+
+two:
+  requester_name: MyString
+  requester_email: MyString
+  ubication_id: 1
+  description: MyString
+  event_type_id: 1
+  commentaries: MyText
+  status: MyString
+  status_updated_at: 2010-08-04 10:51:52

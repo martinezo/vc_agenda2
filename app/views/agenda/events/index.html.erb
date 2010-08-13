@@ -1,0 +1,37 @@
+<h1>Listing agenda_events</h1>
+
+<table>
+  <tr>
+    <th>Requester name</th>
+    <th>Requester email</th>
+    <th>Ubication</th>
+    <th>Description</th>
+    <th>Event type</th>
+    <th>Commentaries</th>
+    <th>Status</th>
+    <th>Status updated at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @agenda_events.each do |agenda_event| %>
+  <tr>
+    <td><%= agenda_event.requester_name %></td>
+    <td><%= agenda_event.requester_email %></td>
+    <td><%= agenda_event.ubication_id %></td>
+    <td><%= agenda_event.description %></td>
+    <td><%= agenda_event.event_type_id %></td>
+    <td><%= agenda_event.commentaries %></td>
+    <td><%= agenda_event.status %></td>
+    <td><%= agenda_event.status_updated_at %></td>
+    <td><%= link_to 'Show', agenda_event %></td>
+    <td><%= link_to 'Edit', edit_agenda_event_path(agenda_event) %></td>
+    <td><%= link_to 'Destroy', agenda_event, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Event', new_agenda_event_path %>

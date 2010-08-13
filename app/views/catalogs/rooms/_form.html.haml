@@ -1,0 +1,27 @@
+= form_for(@catalogs_room) do |f|
+  - if @catalogs_room.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@catalogs_room.errors.count, "error")
+        prohibited this catalogs_room from being saved:
+      %ul
+        - @catalogs_room.errors.full_messages.each do |msg|
+          %li= msg
+
+  %table{ :width => '950', :border => '1', :cellspacing => '0'}
+    %tr.tbl_content
+      %td.tbl_row_header{:width => '110'} Abrev.:
+      %td= f.text_field :abbr, :size => '15'
+
+    %tr.tbl_content
+      %td.tbl_row_header{:width => '110'} Nombre:
+      %td= f.text_field :name
+    
+    %tr.tbl_content
+      %td.tbl_row_header{:width => '110'} Descripción:
+      %td= f.text_field :description, :size => '85'
+
+  %br &nbsp;
+
+  .actions
+    = f.submit 'Guardar aula'

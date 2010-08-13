@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%table{ :width => '950', :border => '1', :cellspacing => '0'}
+  %tr.tbl_content
+    %td.tbl_header Abrev.:
+    %td= @catalogs_ubication.abbr
+  %tr.tbl_content
+    %td.tbl_header{:width => '110'} Nombre:
+    %td= @catalogs_ubication.name
+  %tr.tbl_content
+    %td.tbl_header Responsable:
+    %td= @catalogs_ubication.responsible
+  %tr.tbl_content
+    %td.tbl_header Responsable:
+    %td= @catalogs_ubication.tel_ext
+
+%br &nbsp;
+= link_to 'Editar', edit_catalogs_ubication_path(@catalogs_ubication)
+|
+\#{link_to 'Regresar', catalogs_ubications_path}
+%br &nbsp;

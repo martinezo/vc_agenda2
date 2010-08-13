@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  event_id: 1
+  resource_id: 1
+  start_date_time: 2010-08-04 10:53:07
+  end_date_time: 2010-08-04 10:53:07
+
+two:
+  event_id: 1
+  resource_id: 1
+  start_date_time: 2010-08-04 10:53:07
+  end_date_time: 2010-08-04 10:53:07

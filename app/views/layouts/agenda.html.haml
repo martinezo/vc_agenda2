@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %title ..:: INB1 :: Instituto de Neurobiología ::.. UNAM
+    = stylesheet_link_tag 'vc_agenda2.css'
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+  %body
+    %table{:id =>'layout', :width => '950'}
+      = render :partial => 'layouts/header'
+      = yield
+      = render :partial => 'layouts/footer'
